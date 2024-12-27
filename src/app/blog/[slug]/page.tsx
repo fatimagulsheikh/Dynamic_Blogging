@@ -37,14 +37,14 @@ function PostPage({ params }: { params: { slug: string } }) {
             <div className="inline-flex gap-x-2 items-center">
               <Link
                 target="_blank"
-                href={"https://www.linkedin.com/in/ayesha-aziz-574780310/"}
+                href={"https://www.linkedin.com/in/fatima-gul-4748402b9/"}
               >
                 <LuUser
                   size={30}
                   className="bg-gray-700 p-1 text-white rounded-[50%]"
                 />
               </Link>
-              <h2>Ayesha</h2>
+              <h2>Fatima</h2>
             </div>
           </div>
           <p className="inline-flex gap-x-2 items-center">

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 body-font">
       <div className="container px-5 py-10 mx-auto flex items-center sm:flex-row flex-col">
         <a
-          href="/link"
+          href="/"
           className="flex title-font font-medium items-center md:justify-start justify-center text-white"
       >
           <svg
@@ -77,3 +77,10 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+
+
+
+
+
