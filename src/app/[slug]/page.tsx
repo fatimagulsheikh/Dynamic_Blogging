@@ -8,19 +8,24 @@ type PageProps = {
 
 const BlogPage: React.FC<PageProps> = ({ params }) => {
   const { slug } = params;
-
   return <div>Blog Post: {slug}</div>;
 };
 
 export default BlogPage;
 
-// Fixing getServerSideProps
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  // Ensure that params is typed correctly
+// Updated getServerSideProps with better typing
+export const getServerSideProps: GetServerSideProps<PageProps> = async ({ params }) => {
+  // Yeh ensure karte hain ke params aur slug sahi hain
+  if (!params || typeof params.slug !== 'string') {
+    return {
+      notFound: true, // Agar slug nahi milta toh 404 page show hoga
+    };
+  }
+
   return {
     props: {
       params: {
-        slug: params?.slug as string,
+        slug: params.slug, // Slug ko props mein bhej rahe hain
       },
     },
   };
